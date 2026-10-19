@@ -1,0 +1,36 @@
+{
+  "name": "taqvion-masjid-funding",
+  "version": "1.0.0",
+  "description": "Masjid Funding, Donation & Financial Management System \u2014 Made with Taqvion",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "dev": "node --watch --env-file-if-exists=.env server.js",
+    "migrate": "node --env-file-if-exists=.env src/migrate.js",
+    "create-super-admin": "node --env-file-if-exists=.env scripts/create-super-admin.js",
+    "test": "node --env-file-if-exists=.env.test --test --test-concurrency=1 tests/*.test.js",
+    "build:html": "node scripts/build-html.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.8.2",
+    "cookie-parser": "^1.4.7",
+    "exceljs": "^4.4.0",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "pg": "^8.23.1",
+    "qrcode": "^1.5.4",
+    "zod": "^4.6.7"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20.6"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
